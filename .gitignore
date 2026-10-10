@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+# evidence and tool output never belong in git
+*.dd
+*.raw
+*.mem
+*.vmem
+*.E01
+$MFT
+mem-triage-output/
+*.custody.json

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forensic-evidence-toolkit"
+version = "0.1.0"
+description = "Dependency-free DFIR toolkit: forensic disk imaging with chain of custody, NTFS $MFT parsing with timestomp indicators, and Volatility 3 memory triage."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Al-Gharbi" }]
+keywords = ["dfir", "digital-forensics", "mft", "ntfs", "volatility3", "memory-forensics", "disk-imaging", "timestomp"]
+dependencies = []
+
+[project.optional-dependencies]
+memory = ["volatility3>=2.5"]
+
+[project.scripts]
+fet = "fet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
